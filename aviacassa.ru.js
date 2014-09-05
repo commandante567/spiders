@@ -7,7 +7,7 @@ var system = require('system');
 function getResult(date,dest){
     var page = require('webpage').create(),
         server = 'https://booking.aviacassa.ru/index.php?tsi_frontoffice_cmd=order_switch',
-        data = 'next_page=choose_trip&date_format=site&depart=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0+(MOW)&arrival=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3+(LED)&dateto=05.09.2014&adult=1&child=0&infant=0&RT_OW=OW&class=&ibe_ajax_mode=1&ibe_ajax_update_areas=%23ts_ag_reservation_container%2C%23ts_ag_reservation_stages_container%2C%23ts_basket_container%2C%23ts_ag_personal_menu_container%2C%23ts_ag_reservation_container__offer%2C%23ts_ag_reservation_container__offer_lowcost%2C%23ts_ag_reservation_container__split_fares%2C%23ts_ag_offer_filter_container%2C%23ts_ag_carrier_matrix_container%2C%23ts_ag_currency%2C%23ts_ag_auth_form%2C%23ts_ag_auth_line_main';
+        data = 'next_page=choose_trip&date_format=site&depart=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0+(MOW)&arrival=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3+(LED)&dateto=21.09.2014&dateback=05.09.2014&RT_OW=OW&adult=1&child=0&infant=0&class=+&ibe_ajax_mode=1&ibe_ajax_update_areas=%23ts_ag_reservation_container%2C%23ts_ag_reservation_stages_container%2C%23ts_basket_container%2C%23ts_ag_personal_menu_container%2C%23ts_ag_reservation_container__form_top%2C%23ts_ag_reservation_container__offer%2C%23ts_ag_reservation_container__offer_lowcost%2C%23ts_ag_reservation_container__split_fares%2C%23ts_ag_offer_filter_container%2C%23ts_ag_all_in_one_offer_filter_horizontal_container%2C%23ts_ag_carrier_matrix_container%2C%23ts_ag_currency%2C%23ts_ag_auth_form%2C%23ts_ag_auth_line_main';
 
     var i = 0, inProgress = false;
 
@@ -36,7 +36,7 @@ function getResult(date,dest){
                     console.log('Страница загружена');
                     // Подключаем jQuery
                     page.injectJs('http://code.jquery.com/jquery.js');
-
+                    
                     // Получаем некоторый параметр
                     param = page.evaluate(function() {
                         var results = [];
